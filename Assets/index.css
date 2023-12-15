@@ -191,7 +191,7 @@ h6{
     height: .2rem;
     width: 0rem;
     position: absolute;
-    top: 13px;
+    top: 8px;
     left: -38px;
     transition: all .5s ease-in-out;
 }
@@ -201,7 +201,7 @@ h6{
     height: .2rem;
     width: 0rem;
     position: absolute;
-    top: 13px;
+    top: 8px;
     right: -38px;
     transition: all .5s ease-in-out;
 }
@@ -661,6 +661,12 @@ text-align: center;
     #NavBar #NavBarHead #Search button {
         top: 48px;
         position: absolute;
+    }
+     #NavBarNavigation ul li a::before {
+        top: 5px;
+    }
+    #NavBarNavigation ul li a::after {
+        top: 5px;
     }
 }
 
