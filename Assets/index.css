@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+html{
+    font-size: 62.5%;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+p{
+    font-family: 'Lobster', sans-serif;
+    font-size: 1.6rem;
+}
+h1{
+    font-family: 'josefin sans', sans-serif;
+    font-size: 4rem;
+}
+h2{
+    font-family: 'josefin sans', sans-serif;
+    font-size: 3.5rem;
+}
+h3{
+    font-family: 'josefin sans', sans-serif;
+
+    font-size: 3rem;
+}
+h4{
+    font-family: 'josefin sans', sans-serif;
+
+    font-size: 2.5rem;
+}
+h5{
+    font-family: 'josefin sans', sans-serif;
+
+    font-size: 2rem;
+}
+h6{
+    font-size: 1.6rem;
+    font-family: 'josefin sans', sans-serif;
+}
+
+/* Start Sidebar Section Css */
+#SideBarSection{
+    background-color: #eee;
+    width: 8rem;
+    /* width: 3%; */
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+#SideBarSection #Ham{
+    margin-top: 20px;
+}
+#SideBarSection #Ham:hover .line{
+    width: 2rem;
+} 
+
+#SideBarSection #Ham .line{
+    transition: all .3s ease-in;
+}
+#SideBarSection #Ham .line{
+    height: .2rem;
+    width: 2rem;
+    background-color: black;
+    margin-bottom: .5rem;
+}
+#SideBarSection #Ham .line1,
+#SideBarSection #Ham .line3{
+    height: .2rem;
+    width: 1.4rem;
+}
+#SocialMedia ul li{
+    list-style: none;
+    margin: 5px 0px;
+}
+#SocialMedia ul{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#SocialMedia ul li a{
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform .3s ease;
+}
+#SocialMedia ul li a i{
+    transition: transform .3s ease;
+}
+#SocialMedia ul li a i:hover{
+    transform: scale(1.2)
+}
+#Year{
+    padding: 10px 30px;
+}
+#Year p{
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: green;
+}
+/* End Sidebar Section Css */
+/* Start Navbar Section Css */
+#NavBar{
+    margin-left:8rem;
+    position: fixed;
+    width: 40rem;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.549), rgba(0, 0, 0, 0.7)), url('../img/bg1.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    left: -40rem;
+    z-index: 10;
+    transition: all .5s ease-in-out;
+}
+#NavBarHead{
+    position: relative;
+}
+#NavBarHead h3{
+    letter-spacing: .2rem;
+    color: #deaa86;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+#NavBar #NavBarHead #Search input{
+    background-color: rgb(0, 0 , 0,1);
+    width: 30rem;
+    color: #deaa86;
+    padding: 1rem 1.5rem;
+    outline: none;
+    border: 1px solid #deaa86;
+    border-radius: 100px;
+    transition: all .3s;
+    letter-spacing: .12rem;
+}
+#NavBar #NavBarHead #Search input:focus{
+    background-color: rgb(0, 0, 0,.3);
+
+}
+#NavBar #NavBarHead #Search input::placeholder{
+    color: #deaa86;
+
+}
+#NavBar #NavBarHead #Search button{
+    background-color: transparent;
+    color: #deaa86;
+    border: none;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 70px;
+    right: 12px;
+    cursor: pointer;
+}
+#NavBar #NavBarHead #Search button:focus{
+    outline: none;
+}
+#NavBarNavigation ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 30rem;
+}
+#NavBarNavigation ul li{
+    list-style: none;
+    position: relative;
+}
+#NavBarNavigation ul li a{
+    color: white;
+    font-size: 2.5rem;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#NavBarNavigation ul li a::before{
+    content: "";
+    background-color: #deaa86;
+    height: .2rem;
+    width: 0rem;
+    position: absolute;
+    top: 13px;
+    left: -38px;
+    transition: all .5s ease-in-out;
+}
+#NavBarNavigation ul li a::after{
+    content: "";
+    background-color: #deaa86;
+    height: .2rem;
+    width: 0rem;
+    position: absolute;
+    top: 13px;
+    right: -38px;
+    transition: all .5s ease-in-out;
+}
+#NavBarNavigation ul li a:hover{
+    color: #deaa86;
+}
+#NavBarNavigation ul li a:hover::before{
+    width: 3rem;
+}
+#NavBarNavigation ul li a:hover::after{
+    width: 3rem;
+}
+
+#Copyright{
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+#CheckBox:checked + #NavBar{
+    left: 0rem;
+}
+/* End Navbar Section Css */
+/* Start Header Section Css */
+#HeaderSection{
+    margin-left:8rem;
+    background: linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,.6)),url('/img/header.jpg') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+ #HeaderSection #logo{
+    display: flex;
+    align-items: center;
+
+}
+#HeaderSection #Heading{
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+    justify-content: center;
+    align-items: center;
+}
+#HeaderSection #logo a img{
+    width: 8rem;
+    height: 8rem;
+    
+}
+#HeaderSection #logo h5{
+    font-family: 'josefin sans',sans-serif;
+    margin-left: 1rem;
+    color: #deaa86;
+    letter-spacing: .2rem;
+}
+
+#Heading h2{
+    color: #deaa86;
+    font-family: 'josefin sans',sans-serif;
+    letter-spacing: .1rem;
+    margin: .6rem 0rem;
+    animation: fade 1.5s ease-in;
+}
+#Heading p{
+    color: white;
+    letter-spacing: .2rem;
+    margin: .7rem 0rem;
+    animation: fade 1.5s .5s ease-in backwards;
+
+    /* font-family: 'josefin sans',sans-serif; */
+}
+#Heading button{
+    margin: .7rem 0rem;
+    background:linear-gradient(to right,gold,goldenrod);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    border-radius: 10rem;
+    font-family: 'josefin sans',sans-serif;
+    outline: none;
+    animation: fade 1.5s 1s ease-in backwards;
+    cursor: pointer;
+    transition: transform .1s ease-in-out;
+}
+#Heading button:hover{
+    background: linear-gradient(to right,goldenrod,gold);
+}
+#Heading button:active{
+    transform: translateY(.2rem);
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+/* End Header Section Css */
+
+ /* Start Of About Us  */
+#AboutUsSection{
+    margin-left: 8rem;
+    display: flex;
+    background-color: #f0edeb;
+}
+#AboutUsSection #AboutUsContent{
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    animation: fade 1.5s ease-in-out;
+}
+#AboutUsSection #AboutUsContent h1{
+    color: #deaa86;
+    margin: 1rem 0rem;
+    letter-spacing: .1rem;
+}
+#AboutUsSection #AboutUsContent p{
+    text-align: center;
+    padding: .5rem 2.5rem;
+    margin-bottom: 1rem;
+}
+#AboutUsSection #AboutUsContent button{
+    padding: 1.2rem;
+    font-family: 'josefin sans',sans-serif;
+    letter-spacing: .1rem;
+    background-color: transparent;
+    border: .1rem solid #deaa86;
+    color: #deaa86;
+    border-radius: 10rem;
+    transition: all .5s ease-in-out;
+}
+#AboutUsSection #AboutUsContent button:hover{
+    color: black;
+    border: .1rem solid black;
+}
+#AboutUsSection #AboutUsImg{
+    /* flex: 1 1; */
+    /* height: 5rem; */
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#AboutUsImg img{
+    width: 20rem;
+    position: absolute;
+    z-index: 1;
+    border: .2rem solid gold;
+    /* top: 10px; */
+    /* box-shadow: .5rem .5rem  2rem #deaa86; */
+}
+#AboutUsImg img:nth-child(1) {
+    transform: translate(68%,46%);
+    /* z-index: 10; */
+}
+#AboutUsImg img:nth-child(2) {
+    transform: translate(-5%,63%);
+    /* z-index: 100; */
+
+}
+#AboutUsImg img:nth-child(3) {
+    transform: translate(-5%,-35%);
+    /* z-index: 10; */
+
+}
+#AboutUsImg img:nth-child(4) {
+    transform: translate(68%,-54%);
+/* z-index: 10; */
+}
+ /* End Of About Us  */
+
+/* Start Room Section*/
+#RoomSection{
+    margin-left: 8rem;
+    background-color: white;
+}
+#RoomMainHead{
+    text-align: center;
+    margin: 4rem 0rem;
+}
+#RoomSection #CardContainer{
+    /* width: 60rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#CardContainer #Card{
+    width: 45rem;
+    background-color: black;
+    margin: 2.5rem;
+    box-shadow: 1rem 1.2rem 1.2rem rgb(92, 85, 85);
+}
+#CardContainer #Card img{
+    width: 100%;
+}
+
+#CardContainer #Card h3{
+    color: rgb(220, 215, 215);
+    margin: 1.5rem 1rem;
+    
+}
+#CardContainer #Card p{
+    color: rgb(220, 215, 215);
+    margin: 1.5rem 1rem;
+}
+#CardContainer #Card p:nth-child(3){
+    margin: 1rem;
+    font-size: 2.5rem;
+    text-align: right;
+}
+#CardContainer #Card strike{
+    color: red;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+/* #CardContainer #Card #CardContent div{
+text-align: center;
+} */
+#CardContainer #Card button,#MoreBtn button{
+    padding: 1.2rem 1.5rem;
+    border: .2rem solid #deaa86;
+    background-color: transparent;
+    color: #deaa86;
+    border-radius: 10rem;
+    margin: 0 0 1rem 1rem;
+    align-self: center;
+    transition: all .4s ease-in-out;
+    font-weight: 400;
+    outline: none;
+}
+#CardContainer #Card button:hover,#MoreBtn button:hover{
+    background-color: #deaa86;
+    color: black;
+}
+#RoomSection #MoreBtn button:hover{
+    background-color: #deaa86;
+    color: black;
+}
+#RoomSection #MoreBtn{
+text-align: center;
+}
+#RoomSection #MoreBtn button{
+    background-color: black;
+    color: #deaa86;
+    margin:3rem 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+/* End Room Section  */
+
+
+/* STart Customer Section */
+#CustomerSection{
+    margin-left: 8rem;
+    background-color: rgba(25, 22, 22, 0.955);
+    padding-bottom:10rem;
+    box-sizing: border-box;
+
+}
+#CustomerSection #CustMainHead{
+    color: white;
+    margin:4rem 0rem;
+    box-sizing: border-box;
+    padding-top: 2rem;
+    text-align: center;
+}
+#CardWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#CustomerCard{
+    background-color: #f0edeb;
+    display: flex;
+    width: 55rem;
+}
+#CustomerCard h4{
+    padding: 1.2rem 1rem;
+}
+#CustomerCard p:nth-child(2){
+    font-size: 1.5rem;
+    color: #deaa86;
+    padding: 0rem 1rem;
+    font-style: italic;
+}
+#CustomerCard p:nth-child(3){
+    font-size: 1.6rem;
+    padding: 1rem 1rem;
+    font-style: italic;
+}
+#CustomerCard .CardImg img{
+    width: 20rem;
+    margin: 1rem auto;
+    margin-left: -2rem;
+}
+
+/* STart Customer Section */
+/* Start Footer  Section */
+#FooterSection{
+    display: flex;
+    margin-left: 8rem;
+    justify-content: space-between;
+    padding: 5rem;
+    background-color: #1c1c1c;
+}
+#FooterSection .FooterItems h5{
+    color: #deaa86;
+    margin: 1.5rem 0rem;
+}
+#FooterSection .FooterItems ul li{
+    list-style: none;
+    margin: 1.5rem 0rem;
+}
+#FooterSection .FooterItems ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'josefin sans', sans-serif;
+    transition: color .4s ease-in-out;
+}
+#FooterSection .FooterItems ul li a:hover{
+    color: #deaa86; 
+}
+
+#Contact p{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+#Contact form{
+   display: flex;
+}
+#Contact form input{
+   padding: .6rem 1rem;
+   outline: none;
+   border: none;
+}
+#Contact form button{
+   background-color: orange;
+   border: none;
+   padding: .7rem 1rem;
+   margin: 0px;
+}
+#Gallery div{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+}
+#Gallery img{
+    width: 10rem;
+    margin: 0rem 1rem;
+    border: .1rem solid #deaa86;
+    /* box-shadow: .2rem .2rem .5rem white; */
+    transition: transform .4s ease-in-out;
+}
+#Gallery img:hover{
+    transform: scale(1.2);
+}
+#Copyrigh{
+    background-color: #1c1c1c;
+    color: white;
+    margin-left: 8rem;
+    text-align: center;
+    height: 100%;
+}
+#Copyrigh p{
+    /* background-color: #1c1c1c; */
+    color: white;
+}
+/* End Footer  Section */
+
+
+
+
+/* Media Query */
+@media (max-width:1371px) {
+    #CardWrapper{
+        flex-direction: column;
+    }
+    #CardWrapper #CustomerCard:first-child{
+        margin-bottom: 2rem;
+
+    }
+    #AboutUsSection #AboutUsImg {
+        right: 4rem;
+    }
+}
+@media (max-width:1225px) {
+    #FooterSection{
+        flex-direction: column;
+    }
+    .FooterItems ul{
+        display: flex;
+    }
+    .FooterItems ul li a{
+        margin: 0rem 2rem;
+    }
+}
+@media (max-width:1107px) {
+    #AboutUsSection{
+        flex-direction: column;
+        padding-bottom: 20rem;
+        align-items: center;
+    }
+    #HeaderSection #Heading {
+        height: 100%;
+
+    }
+    #AboutUsContent{
+        margin-bottom: 10rem;
+    }
+    #AboutUsImg img{
+        width: 16rem;
+    }
+}
+
+@media (max-width:745px) {
+    .FooterItems ul{
+        display: flex;
+        flex-direction: column;
+    }
+    #CustomerCard{
+        width: 42rem;
+    }
+}
+@media (max-width:531px) {
+    html{
+        font-size: 50%;
+    }
+    #CustomerCard p:nth-child(3) {
+        font-size: 1.4rem;
+    }
+    #Heading h2{
+        text-align: center;
+    }
+    #NavBar #NavBarHead #Search button {
+        top: 60px;
+
+    }
+}
+@media (max-width:448px) {
+    html{
+        font-size: 40%;
+    }
+
+    #CustomerCard {
+        width: 35rem;
+    }
+    #NavBar #NavBarHead #Search button {
+        top: 48px;
+        position: absolute;
+    }
+}
+
+@media (max-width:343px) {
+    #CustomerCard {
+        width: 35rem;
+    }
+    #Contact form input {
+        width: 26rem;
+    }
+    #Gallery img {
+        margin: 1rem 1rem;
+    }
+}
+@media (max-width:306px) {
+    #CustomerCard {
+        display: flex;
+        width: 30rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #CustomerCard .CardImg img {
+        width: 20rem;
+        margin: 0;
+        margin-top: -2rem;
+    }
+    #CardWrapper #CustomerCard:first-child {
+        margin-bottom: 4rem;
+
+    }
+    #Contact form input {
+        width: 21rem;
+    }
+}
